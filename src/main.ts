@@ -3,6 +3,7 @@ import {MonsterType} from "./monster-type.js";
 import {MonsterParty} from "./monster-party.js";
 import {CandyShop} from "./candy-shop.js";
 import {CandyType} from "./candy-type.js";
+import {SalzGebaeck} from "./salz-gebaeck.js";
 
 console.log("--- Monster Test ---");
 let monster = new Monster("Gorgo", 300, ["scaring villagers", "collecting shiny objects"], MonsterType.Gorgone);
@@ -43,5 +44,10 @@ console.log(monsterParty2.makePartySound());
 
 console.log(" ")
 
-let candyShop = new CandyShop([CandyType.Gummibärli]);
+let candyShop = new CandyShop<CandyType>([CandyType.Gummibärli]);
 console.log(candyShop.candy);
+
+console.log(" ")
+
+let shop = new CandyShop<CandyType | SalzGebaeck>([CandyType.Gummibärli, SalzGebaeck.Chips])
+console.log(shop.candy);

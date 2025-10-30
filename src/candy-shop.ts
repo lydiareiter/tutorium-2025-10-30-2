@@ -1,10 +1,8 @@
-import type {CandyType} from "./candy-type";
-
-export class CandyShop {
-    candy: CandyType[];
+export class CandyShop<Typ extends string> {
+    candy: Typ[];
 
 
-    constructor(candy: CandyType[]) {
+    constructor(candy: Typ[]) {
         this.candy = candy;
     }
 }
