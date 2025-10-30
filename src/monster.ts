@@ -9,4 +9,8 @@ export class Monster {
         this.age = age;
         this.hobbies = hobbies;
     }
+
+    addHobby (hobby: string) {
+        this.hobbies.push(hobby);
+    }
 }
