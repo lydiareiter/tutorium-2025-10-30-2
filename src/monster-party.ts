@@ -1,5 +1,4 @@
 import {Monster} from "./monster.js";
-import type {MonsterType} from "./monster-type";
 
 export class MonsterParty extends Monster {
 
