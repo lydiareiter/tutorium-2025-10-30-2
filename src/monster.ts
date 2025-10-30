@@ -26,7 +26,15 @@ export class Monster {
 
 
     set age(value: number) {
-        this._age = value;
+        if (value > this._age) {
+            this._age = value;
+        } else {
+            console.log("Error: Age can not be smaller than current age.")
+        }
+    }
+
+    birthday () {
+        this._age++;
     }
 
     get hobbies(): string[] {

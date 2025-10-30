@@ -16,3 +16,8 @@ console.log(" ")
 
 monster.age = 301;
 console.log(monster.age);
+
+console.log(" ")
+
+monster.age = -10;
+console.log(monster.age);
