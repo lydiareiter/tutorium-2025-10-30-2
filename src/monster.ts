@@ -24,6 +24,11 @@ export class Monster {
         return this._age;
     }
 
+
+    set age(value: number) {
+        this._age = value;
+    }
+
     get hobbies(): string[] {
         return this._hobbies;
     }

@@ -11,3 +11,8 @@ console.log(" ");
 
 monster.addHobby("horse riding");
 console.log(`Hobbies: ${monster.hobbies.join(", ")}`);
+
+console.log(" ")
+
+monster.age = 301;
+console.log(monster.age);
