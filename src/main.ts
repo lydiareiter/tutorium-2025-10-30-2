@@ -1,5 +1,6 @@
 import {Monster} from './monster.js';
 import {MonsterType} from "./monster-type.js";
+import {MonsterParty} from "./monster-party.js";
 
 console.log("--- Monster Test ---");
 let monster = new Monster("Gorgo", 300, ["scaring villagers", "collecting shiny objects"], MonsterType.Gorgone);
@@ -31,3 +32,9 @@ console.log(monster.age);
 console.log(" ");
 
 console.log(monster.monsterType);
+
+console.log(" ");
+
+// let monsterParty = new MonsterParty((Monster){ monster.name, monster.age, [], monster.monsterType});
+let monsterParty2 = new MonsterParty(monster)
+console.log(monsterParty2.makePartySound());
