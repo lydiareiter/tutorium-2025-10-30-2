@@ -33,4 +33,31 @@ console.log(candyShop.candy);
 console.log(" ");
 let shop = new CandyShop([CandyType.Gummibärli, SalzGebaeck.Chips]);
 console.log(shop.candy);
+console.log(" ");
+shop.add(SalzGebaeck.Fischis);
+console.log(shop.candy);
+console.log(" ");
+// type SuessSalziges = CandyType & SalzGebaeck; // Strg + / -> wenn Numpad
+// let saltedCaramel: SuessSalziges = CandyType.SaltedCaramel & SalzGebaeck.SaltedCaramel;
+// console.log(saltedCaramel);
+let person = {
+    svnr: 123456789,
+    groesese: 152,
+    vorlieben: [],
+    name: "Neysi",
+    alter: 22
+};
+let mitarbeiter = { arbeitsstunden: 5, mitarbeiternr: 12345 };
+console.log(person, mitarbeiter);
+console.log(" ");
+let neysi = {
+    name: "neysi",
+    svnr: 123456789,
+    groesese: 152,
+    vorlieben: [],
+    alter: 22,
+    mitarbeiternr: 123456,
+    arbeitsstunden: 5
+};
+console.log(neysi);
 //# sourceMappingURL=main.js.map

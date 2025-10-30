@@ -4,6 +4,8 @@ import {MonsterParty} from "./monster-party.js";
 import {CandyShop} from "./candy-shop.js";
 import {CandyType} from "./candy-type.js";
 import {SalzGebaeck} from "./salz-gebaeck.js";
+import type {Person} from "./person";
+import type {Mitarbeiter} from "./mitarbeiter";
 
 console.log("--- Monster Test ---");
 let monster = new Monster("Gorgo", 300, ["scaring villagers", "collecting shiny objects"], MonsterType.Gorgone);
@@ -51,3 +53,39 @@ console.log(" ")
 
 let shop = new CandyShop<CandyType | SalzGebaeck>([CandyType.Gummibärli, SalzGebaeck.Chips])
 console.log(shop.candy);
+
+console.log(" ")
+
+shop.add(SalzGebaeck.Fischis)
+console.log(shop.candy)
+
+console.log(" ")
+
+// type SuessSalziges = CandyType & SalzGebaeck; // Strg + / -> wenn Numpad
+// let saltedCaramel: SuessSalziges = CandyType.SaltedCaramel & SalzGebaeck.SaltedCaramel;
+// console.log(saltedCaramel);
+
+let person: Person = {
+    svnr: 123456789,
+    groesese:152,
+    vorlieben: [],
+    name: "Neysi",
+    alter: 22
+};
+
+let mitarbeiter: Mitarbeiter = {arbeitsstunden: 5, mitarbeiternr: 12345};
+console.log(person, mitarbeiter);
+
+console.log(" ")
+
+type MitarbeitendePerson = Person & Mitarbeiter;
+let neysi: MitarbeitendePerson = {
+    name: "neysi",
+    svnr: 123456789,
+    groesese:152,
+    vorlieben: [],
+    alter:22,
+    mitarbeiternr: 123456,
+    arbeitsstunden:5
+};
+console.log(neysi);
