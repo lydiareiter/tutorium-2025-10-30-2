@@ -1,13 +1,17 @@
+import type {MonsterType} from "./monster-type";
+
 export class Monster {
     private _name: string;
     private _age: number;
     private _hobbies: string[];
+    private _monsterType: MonsterType;
 
 
-    constructor(name: string, age: number, hobbies: string[]) {
+    constructor(name: string, age: number, hobbies: string[], monsterType: MonsterType) {
         this._name = name;
         this._age = age;
         this._hobbies = hobbies;
+        this._monsterType = monsterType;
     }
 
     addHobby (hobby: string) {
@@ -39,5 +43,9 @@ export class Monster {
 
     get hobbies(): string[] {
         return this._hobbies;
+    }
+
+    get monsterType(): MonsterType {
+        return this._monsterType;
     }
 }

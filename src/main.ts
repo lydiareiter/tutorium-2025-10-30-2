@@ -1,7 +1,8 @@
-import { Monster } from './monster.js';
+import {Monster} from './monster.js';
+import {MonsterType} from "./monster-type.js";
 
 console.log("--- Monster Test ---");
-let monster = new Monster("Gorgo", 300, ["scaring villagers", "collecting shiny objects"]);
+let monster = new Monster("Gorgo", 300, ["scaring villagers", "collecting shiny objects"], MonsterType.Gorgone);
 
 console.log(`Name: ${monster.name}`);
 console.log(`Age: ${monster.age}`);
@@ -26,3 +27,7 @@ console.log(" ")
 
 monster.birthday();
 console.log(monster.age);
+
+console.log(" ");
+
+console.log(monster.monsterType);
