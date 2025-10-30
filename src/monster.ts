@@ -34,7 +34,7 @@ export class Monster {
     }
 
     birthday () {
-        this._age++;
+        this.age++;
     }
 
     get hobbies(): string[] {

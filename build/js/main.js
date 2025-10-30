@@ -13,4 +13,7 @@ console.log(monster.age);
 console.log(" ");
 monster.age = -10;
 console.log(monster.age);
+console.log(" ");
+monster.birthday();
+console.log(monster.age);
 //# sourceMappingURL=main.js.map
