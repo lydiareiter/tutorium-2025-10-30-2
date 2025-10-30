@@ -1,4 +1,4 @@
-class Moster {
+export class Monster {
     name: string;
     age: number;
     hobbies: string[];
