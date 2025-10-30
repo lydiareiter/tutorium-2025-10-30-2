@@ -79,7 +79,7 @@ console.log(person, mitarbeiter);
 console.log(" ")
 
 type MitarbeitendePerson = Person & Mitarbeiter;
-let neysi: MitarbeitendePerson = {
+let neysi: MitarbeitendePerson = { // Strg + Leertaste -> sehen welche noch Fehlen
     name: "neysi",
     svnr: 123456789,
     groesese:152,
